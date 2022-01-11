@@ -1,7 +1,15 @@
-﻿#include "card.h"
+#include <iostream>
+#include "card.h"
+#include "deck.h"
+#include <ctime>
 using namespace std;
-int main() {
-	Card card1(CardRank::rank2, CardSuit::suitDiamonds);
-	card1.printCard();
+int main()
+{
+	srand(time(0));
+	rand();
+	Deck deck;
+	deck.printDeck();
+	deck.shuffle();
+	cout << endl;
+	deck.printDeck();
 }
-	
