@@ -7,8 +7,9 @@ class Hand {
 protected:
 	std::vector<Card> hand;
 	int score;
+	bool canContinue;
 public:
-	Hand() :score{ 0 } 
+	Hand() :score{ 0 }, canContinue{ true }
 	{}
 	void addCard(Card card) {	hand.push_back(card); }
 	void printHand() {
@@ -30,5 +31,5 @@ public:
 		}
 	}
 	int getScore() { return score; }
-
+	bool getCanContinue(){ return canContinue; }
 };

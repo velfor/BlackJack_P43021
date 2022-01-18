@@ -11,6 +11,16 @@ public:
 			printHand();
 			calculateScore();
 			std::cout << "Dealer have " << getScore() << " points" << std::endl;
+			if (score == 21) {
+				std::cout << " Dealer win!" << std::endl;
+				canContinue = false;
+				break;
+			}
+			else if (score > 21) {
+				std::cout << " Dealer lose!" << std::endl;
+				canContinue = false;
+				break;
+			}
 		} while (score < 17);
 	}
 };
